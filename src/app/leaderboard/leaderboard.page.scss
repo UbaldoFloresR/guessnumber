@@ -1,0 +1,75 @@
+// Fondo claro y espaciamiento general
+ion-content {
+  --background: linear-gradient(135deg, #e3fdfd, #e8f6f3); /* Fondo claro con gradiente */
+  padding: 25px; /* Espaciado general */
+}
+
+// Estilo para el encabezado
+ion-header {
+  ion-toolbar {
+    background: linear-gradient(90deg, #7f7fd5, #86a8e7, #91eae4); /* Gradiente sofisticado */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra envolvente */
+
+    ion-title {
+      font-weight: bold;
+      font-size: 1.5em; /* Texto más grande */
+      letter-spacing: 0.5px; /* Espaciado elegante */
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra en el texto */
+    }
+  }
+}
+
+// Personalización de cada item de la lista
+ion-item {
+  border-radius: 12px; /* Bordes más suaves */
+  margin: 12px 0;
+  --background: #ffffff; /* Fondo claro */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra destacada */
+  padding: 15px; /* Mayor espaciado */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+
+  &:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más envolvente */
+  }
+}
+
+// Estilo para el índice del jugador
+ion-text h3 {
+  color: #50c9c3; /* Verde menta vibrante */
+  font-size: 1.4em; /* Texto más grande */
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase; /* Letras en mayúsculas */
+  letter-spacing: 1px; /* Espaciado para estilo */
+}
+
+// Personalización de la etiqueta principal (nombre de usuario)
+ion-label {
+  font-size: 1.1em;
+  color: #34495e; /* Azul oscuro para texto general */
+
+  strong {
+    color: #2c3e50; /* Azul profundo */
+    font-size: 1.2em; /* Tamaño destacado */
+  }
+
+  p {
+    color: #7f8c8d; /* Gris neutro */
+    font-size: 1em;
+    margin: 6px 0 0;
+    font-style: italic; /* Estilo diferenciado */
+  }
+}
+
+// Estilo para los puntos
+ion-note {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ff6b6b; /* Rojo vibrante */
+  background: #ffecec; /* Fondo suave */
+  padding: 5px 10px; /* Espaciado adicional */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}

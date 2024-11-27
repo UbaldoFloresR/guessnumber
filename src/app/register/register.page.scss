@@ -1,11 +1,129 @@
+/* register.page.scss */
+
+// Fondo y margen general
+ion-content {
+  --background: linear-gradient(135deg, #e3fdfd, #e8f6f3); /* Fondo con gradiente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Centra verticalmente */
+}
+
+// Contenedor del registro
 .register-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    }
-   
-    .login-link {
+  max-width: 450px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra destacada */
+  background: #ffffff; /* Fondo blanco para contraste */
+  animation: fadeIn 1s ease-in-out; /* Animación suave al cargar */
+}
+
+// Estilos para el ion-card
+ion-card {
+  border-radius: 15px; /* Bordes suaves */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra elegante */
+  overflow: hidden; /* Para efectos visuales */
+}
+
+// Estilos para el encabezado del card
+ion-card-header {
+  background: linear-gradient(90deg, #4facfe, #00f2fe); /* Gradiente llamativo */
+  color: white;
+  padding: 20px;
+
+  ion-card-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase; /* Letras en mayúsculas */
+    letter-spacing: 1px; /* Espaciado elegante */
     text-align: center;
-    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra ligera en el texto */
+  }
+
+  ion-card-subtitle {
+    color: #d1e9ff;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 5px;
+  }
+}
+
+// Personalización de cada item del formulario
+ion-item {
+  --background: #ffffff;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:focus-within {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más intensa al enfocar */
+  }
+}
+
+// Estilo de los labels y inputs
+ion-label {
+  color: #4a90e2; /* Azul moderno */
+  font-size: 1rem;
+}
+
+ion-input {
+  color: #333; /* Texto en gris oscuro */
+  font-size: 1rem;
+}
+
+// Botón de registro
+ion-button {
+  --background: linear-gradient(90deg, #4a90e2, #6ec1e4); /* Gradiente para el botón */
+  --color: white;
+  font-size: 1.2em; /* Tamaño mayor */
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 12px; /* Bordes suaves */
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra para destacar */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05); /* Efecto hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más envolvente */
+  }
+}
+
+// Enlace para iniciar sesión
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+
+  ion-label {
+    color: #7f8c8d; /* Gris neutro */
+    font-size: 1rem;
+  }
+
+  a {
+    color: #4facfe; /* Azul vibrante */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+      color: #3498db; /* Azul más oscuro */
     }
+  }
+}
+
+/* Animación para la entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

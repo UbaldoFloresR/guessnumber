@@ -1,33 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-
 import { GameApiService } from '../services/game-api.service';
 
 @Component({
- selector: 'app-login',
- templateUrl: './login.page.html',
- styleUrls: ['./login.page.scss'],
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
- usuario: string = '';
- password: string = '';
- constructor(private router: Router,
-  private api: GameApiService
- ) { 
+  usuario: string = '';
+  password: string = '';
+  mensajeError: string = ''; // Variable para el mensaje de error
 
- }
- ngOnInit() {
+  constructor(
+    private router: Router,
+    private api: GameApiService
+  ) {}
 
- }
- async onClickIngresar(form: NgForm) {
-  if(form.invalid) {
-  console.log('Debes completar todos los campos');
-  return;
-  }
-  await this.api.login(this.usuario, this.password)
-  .then(() => this.router.navigate(['/menu']))
-  .catch(data => console.error('LOGIN:', data.error.message));
+  ngOnInit() {}
+
+  async onClickIngresar(form: NgForm) {
+    if (form.invalid) {
+      this.mensajeError = 'Debes completar todos los campos';
+      return;
+    }
+
+    this.mensajeError = ''; // Limpia el mensaje de error
+    await this.api
+      .login(this.usuario, this.password)
+      .then(() => this.router.navigate(['/menu']))
+      .catch((data) => {
+        this.mensajeError = data.error.message;
+      });
   }
 }
-

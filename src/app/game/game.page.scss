@@ -1,0 +1,123 @@
+/* game.page.scss */
+ion-header {
+  --background: linear-gradient(90deg, #7f7fd5, #86a8e7, #91eae4); /* Gradiente elegante en tonos azulados */
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Sombra más marcada para un efecto elegante */
+  font-weight: bold; /* Hacer el texto del encabezado más prominente */
+  padding: 10px;
+}
+
+ion-toolbar {
+  --background: #7f7fd5; /* Azul vibrante */
+  border-bottom: 2px solid #ffffff; /* Línea divisoria para estilo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más envolvente */
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background: radial-gradient(circle, #e3fdfd, #e8f6f3); /* Fondo con un gradiente radial */
+  border-radius: 25px; /* Bordes muy redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra amplia */
+  margin: 20px;
+  animation: fadeIn 1s ease-in-out; /* Animación suave al cargar */
+}
+
+ion-card {
+  width: 100%;
+  max-width: 500px;
+  margin: 25px 0;
+  --background: linear-gradient(135deg, #ffffff, #f3f7ff); /* Fondo elegante con gradiente claro */
+  border-radius: 20px; /* Bordes más suaves */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Sombra destacada */
+  overflow: hidden; /* Para efectos de borde */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+ion-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25); /* Efecto de elevación */
+}
+
+ion-card-title {
+  font-size: 1.8rem; /* Texto más grande */
+  font-weight: bold;
+  color: #2c3e50; /* Azul oscuro */
+  text-align: center;
+  text-transform: uppercase; /* Letras en mayúsculas para resaltar */
+  letter-spacing: 1px; /* Espaciado elegante */
+}
+
+ion-card-subtitle {
+  font-size: 1.1rem;
+  color: #7f8c8d; /* Gris neutro */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+ion-item {
+  --highlight-color-focused: #91eae4; /* Azul cielo para foco */
+  border-radius: 12px; /* Bordes suaves */
+  margin: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra para destacar */
+  background-color: #ffffff; /* Fondo claro */
+  padding: 10px; /* Espaciado adicional */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+ion-item:focus-within {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* Sombra más intensa al enfocarse */
+}
+
+ion-button {
+  font-size: 1.3rem; /* Botones más grandes */
+  margin-top: 15px;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-weight: bold;
+  text-transform: uppercase; /* Letras en mayúsculas */
+  letter-spacing: 1px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Transiciones para dinamismo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra destacada */
+}
+
+ion-button[expand="block"] {
+  --background: linear-gradient(90deg, #4facfe, #00f2fe); /* Gradiente llamativo en azul */
+  --background-activated: #3498db; /* Azul oscuro al presionar */
+}
+
+ion-button[expand="block"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Más elevación */
+}
+
+ion-button[color="medium"] {
+  --background: linear-gradient(90deg, #50c9c3, #96deda); /* Verde menta */
+  --background-activated: #48b1bf; /* Menta más oscuro */
+}
+
+.reiniciar {
+  background: linear-gradient(90deg, #ff6f61, #fe947b); /* Gradiente rojo-anaranjado */
+  color: white;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Sombra destacada */
+  transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.reiniciar:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #e74c3c, #ff6347); /* Más intenso en hover */
+}
+
+/* Animación para el contenedor */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

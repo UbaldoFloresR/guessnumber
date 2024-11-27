@@ -1,12 +1,115 @@
+/* login.page.scss */
+
+ion-content {
+  --background: linear-gradient(135deg, #e3fdfd, #e8f6f3); /* Fondo con gradiente suave */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Asegura que el formulario esté centrado en la vista */
+}
+
 .login-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    }
-   
-    .register-link {
-    text-align: center;
-    margin-top: 10px;
-    }
-   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 450px; /* Limita el ancho máximo del contenedor */
+  padding: 30px;
+  border-radius: 20px; /* Bordes suaves */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra destacada */
+  background: #ffffff; /* Fondo blanco para contraste */
+  animation: fadeIn 1s ease-in-out; /* Animación suave al cargar */
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px; /* Bordes redondeados más suaves */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra elegante */
+  overflow: hidden; /* Para efectos visuales del borde */
+}
+
+ion-card-header {
+  background: linear-gradient(90deg, #4facfe, #00f2fe); /* Gradiente llamativo */
+  color: white;
+  border-radius: 15px 15px 0 0; /* Bordes superiores redondeados */
+  padding: 25px; /* Espaciado más generoso */
+  text-align: center; /* Centra el texto */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra ligera para el texto */
+}
+
+ion-card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 1px; /* Espaciado elegante */
+}
+
+ion-card-subtitle {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-top: 10px;
+  color: #dfe6e9; /* Color claro para el subtítulo */
+}
+
+.input-item {
+  margin-bottom: 20px;
+  ion-input {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    background: #f9fcff; /* Fondo claro para los campos */
+  }
+}
+
+ion-button {
+  border-radius: 12px; /* Bordes redondeados en los botones */
+  font-weight: bold;
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 0.5px; /* Espaciado para estilo */
+  padding: 12px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra destacada */
+}
+
+.login-button {
+  background: linear-gradient(90deg, #4a90e2, #6ec1e4); /* Gradiente para el botón de inicio de sesión */
+  --background-activated: #357abd;
+  color: white;
+
+  &:hover {
+    transform: scale(1.05); /* Efecto de hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+  }
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #34495e; /* Azul oscuro */
+}
+
+.register-link a {
+  color: #4facfe; /* Azul vibrante */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+
+  &:hover {
+    text-decoration: underline;
+    color: #3498db; /* Azul más oscuro en hover */
+  }
+}
+
+/* Animación para la entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
